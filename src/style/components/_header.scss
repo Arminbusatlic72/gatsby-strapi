@@ -1,0 +1,26 @@
+.header {
+  background-color: $white-color;
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  // border-bottom: $border;
+}
+.header__content-wrapper {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+  }
+}
+.icon {
+  height: 2rem;
+}

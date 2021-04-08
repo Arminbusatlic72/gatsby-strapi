@@ -1,0 +1,69 @@
+import React, { useState } from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
+
+const Menu = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allStrapiMainMenu {
+        edges {
+          node {
+            body {
+              id
+              label
+              url
+              submenu {
+                id
+                submenuUrl
+                submenulabel
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const [open, setOpen] = useState(false)
+  return (
+    <nav className="header__nav">
+      <div
+        className={open === true ? "btn__rotate" : "nav__btn"}
+        onClick={() => setOpen(!open)}
+        onKeyDown={() => setOpen(!open)}
+        role="button"
+        tabIndex="0"
+      >
+        <div className="nav__line"> </div>
+        <div className="nav__line"> </div>
+        <div className="nav__line"> </div>
+      </div>
+      <ul className={open === true ? "nav__menu menu-show" : "nav__menu"}>
+        <div className="container">
+          <div className="nav__content-wrapper">
+            {data.allStrapiMainMenu.edges[0].node.body.map(body => {
+              return (
+                <li key={body.id} className="nav__menu-item">
+                  <Link className="nav__menu-link" href={body.url}>
+                    {body.label}
+                  </Link>
+                  <ul className="nav__submenu">
+                    {body.submenu.map(submenu => {
+                      return (
+                        <li key={submenu.id} className="nav__submenu-item">
+                          <Link className="nav__submenu-link">
+                            {submenu.submenulabel}
+                          </Link>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </li>
+              )
+            })}
+          </div>
+        </div>
+      </ul>
+    </nav>
+  )
+}
+export default Menu

@@ -1,0 +1,42 @@
+.main-heading__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  width: 100%;
+  -webkit-animation: slideDown 2s 1.3s;
+  -moz-animation: slideDown 2s 1.3s;
+  animation: slideDown 2s 1.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+  background-color: $white-color;
+}
+.video__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: -101;
+}
+.video-background {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -100;
+  // position: absolute;
+  width: auto;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+@keyframes slideDown {
+  from {
+    min-height: 1000px;
+    // transition: max-height 0.15s ease-out;
+    overflow: hidden;
+  }
+  to {
+    min-height: 250px;
+    // transition: max-height 0.25s ease-in;
+  }
+}
