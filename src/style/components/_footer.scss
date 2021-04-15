@@ -7,6 +7,9 @@ footer {
   position: relative;
   background-color: black;
   padding: 2rem;
+  p {
+    color: $white-color;
+  }
 }
 
 footer a,

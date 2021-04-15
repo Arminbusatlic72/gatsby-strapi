@@ -38,12 +38,12 @@ const Menu = () => {
         <div className="nav__line"> </div>
       </div>
       <ul className={open === true ? "nav__menu menu-show" : "nav__menu"}>
-        <div className="container">
+        <div className="container-fluid">
           <div className="nav__content-wrapper">
             {data.allStrapiMainMenu.edges[0].node.body.map(body => {
               return (
                 <li key={body.id} className="nav__menu-item">
-                  <Link className="nav__menu-link" href={body.url}>
+                  <Link className="nav__menu-link" to={body.url}>
                     {body.label}
                   </Link>
                   <ul className="nav__submenu">

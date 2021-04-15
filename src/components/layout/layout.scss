@@ -1,10 +1,21 @@
 @import "../../style/index";
+@import "~video-react/styles/scss/video-react";
 @import "../../style/components/header";
 @import "../../style/components/menu";
 @import "../../style/components/footer";
 @import "../../style//components/search";
-@import "../../style/components/video-background";
-main {
-  min-height: 100vh;
-  height: 100%;
-}
+@import "../../style/components/hero";
+@import "../../style/components/about";
+@import "../../style/components/counters";
+@import "../../style/components/logo";
+@import "../../style/components/pageHeader";
+@import "../../style/components/ourMission";
+@import "../../style/components/knowledgeAndWisdomSection";
+@import "../../style/components/plannedKnowledgeBasesSection";
+@import "../../style/components/proposeKnowledgeBaseSection";
+@import "../../style/components/applySection.scss";
+@import "../../style/components/createKnowledgeBase.scss";
+@import "../../style/components/contactForm.scss";
+@import "../../style/components/catalystSection.scss";
+@import "../../style/components/managementSection.scss";
+@import "../../style/components/catalystVideo";

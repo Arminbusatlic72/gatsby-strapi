@@ -1,0 +1,20 @@
+.catalyst-section {
+  padding-block: 10rem;
+  h6 {
+    // color: $gray-color;
+  }
+}
+.catalyst-section__heading {
+  position: relative;
+}
+.catalyst-section__heading:before {
+  position: absolute;
+  bottom: -23px;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  content: "";
+}
+.catalyst-section__text-wrapper {
+  padding-block: 4rem;
+}

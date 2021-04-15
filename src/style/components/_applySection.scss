@@ -1,0 +1,22 @@
+.apply-section {
+  padding-block: 10rem;
+}
+.apply-section__heading-wrapper {
+  position: relative;
+  min-height: 10rem;
+  @media (min-width: 550px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.apply-section__heading-wrapper:before {
+  position: absolute;
+  bottom: 0rem;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  content: "";
+}
+.apply-section__text-wrapper {
+  padding-block: 4rem;
+}

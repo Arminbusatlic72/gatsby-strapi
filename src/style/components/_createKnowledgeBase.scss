@@ -1,0 +1,26 @@
+.create-knowledge-base-section {
+  padding-block: 10rem;
+  h3 {
+    color: $white-color;
+  }
+  h6 {
+    color: $gray-color;
+  }
+}
+.apply-icon {
+  display: block;
+  height: 3rem;
+  color: $white-color;
+}
+.create-knowledge-base-section__heading {
+  position: relative;
+  color: $white-color;
+}
+.create-knowledge-base-section__heading:before {
+  position: absolute;
+  bottom: 0rem;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  content: "";
+}

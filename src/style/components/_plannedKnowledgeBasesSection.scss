@@ -1,0 +1,111 @@
+.planed-knowledge-bases-section {
+  position: relative;
+  padding-block: 10rem;
+}
+.planed-knowledge-bases-section__heading {
+  margin-bottom: 4rem;
+}
+.page-nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  border: $border;
+  z-index: 80;
+  background-color: #fff;
+  align-self: flex-start;
+}
+.page-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.page-navigation__list-item {
+  height: 84px;
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 1rem;
+  margin: 0 1rem;
+  font-weight: 500;
+  background-image: linear-gradient(0deg, #000, #000);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: calc(100% - 6px) 0;
+  transition: background 0.5s;
+  a {
+    text-transform: uppercase;
+    color: $black-color;
+    cursor: pointer;
+  }
+}
+.page-navigation__list-item:hover {
+  background-size: 100% 3px;
+}
+.sliding-container__container {
+  @media (min-width: 550px) {
+    display: flex;
+    max-width: 1570px;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.sliding-container__media {
+  @media (min-width: 550px) {
+    width: 50%;
+    height: 500px;
+  }
+}
+.sliding-container__placeholder {
+  ul {
+    list-style: disc;
+  }
+
+  box-sizing: border-box;
+  padding: 32px 0 32px 32px;
+  padding: 0 15px;
+  transition: margin 1.5s linear;
+  @media (min-width: 550px) {
+    display: flex;
+    align-items: center;
+    flex: none;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-top: 0;
+    width: 50%;
+
+    padding: 64px 0 64px 64px;
+  }
+}
+.left {
+  @media (min-width: 550px) {
+    justify-content: flex-end;
+    padding: 64px 64px 64px 0px;
+  }
+}
+.civil-rights-section {
+  background-color: $white-color;
+  padding-block: 5rem;
+  margin-block: 10rem;
+  position: relative;
+}
+.civil-rights-section__heading:before {
+  position: absolute;
+  bottom: -2rem;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  content: "";
+}
+.civil-rights-section__heading {
+  position: relative;
+  margin-bottom: 10rem;
+}
+.text-center {
+  text-align: center;
+}

@@ -62,7 +62,7 @@ const Footer = () => {
                   alt="logo"
                   layout="fixed"
                   quality={95}
-                  formats={["AUTO", "WEBP", "AVIF"]}
+                  // formats={["AUTO", "WEBP", "AVIF"]}
                 />
               </Link>
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
 
           <div className="col-xs-12 col-md-6">
             <div className="row">
-              <div className="col-xs-4">
+              <div className="col-xs-6">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
                 <h3 className="address">Posjetite nas</h3>
                 <p>
@@ -84,9 +84,9 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div className="col-xs-4">
+              <div className="col-xs-6">
                 <FontAwesomeIcon icon={faUsers} className="icon" />
-                <h3 className="social">Zapratite na socijalnim mrežama</h3>
+                <h3 className="social">Social media</h3>
                 <ul>
                   {data.allStrapiFooter.edges[0].node.socialMediaMenu.map(
                     socialMediaMenu => (
@@ -103,9 +103,9 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="col-xs-6">
+              <div className="col-xs-12">
                 <FontAwesomeIcon icon={faEnvelope} className="icon" />
-                <h3 className="contact">Kontaktirajte nas</h3>
+                <h3 className="contact">Contact Us</h3>
                 <ul>
                   {data.allStrapiFooter.edges[0].node.contactList.map(
                     contact => (

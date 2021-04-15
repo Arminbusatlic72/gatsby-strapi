@@ -1,0 +1,12 @@
+.knowledge-and-wisdom-section {
+  padding-block: 10rem;
+  ul {
+    list-style: disc;
+  }
+}
+.text-wrapper {
+  @media (min-width: 550px) {
+    padding-top: 4rem;
+    padding-left: 10rem;
+  }
+}

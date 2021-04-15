@@ -1,0 +1,23 @@
+.counter-section {
+  color: $white-color;
+  padding-block: 10rem;
+}
+
+.counters-section__heading:before {
+  position: absolute;
+  bottom: -10px;
+  height: 2px;
+  width: 100%;
+
+  background-color: currentColor;
+  content: "";
+}
+.counters-wrapper {
+  display: flex;
+}
+.counter {
+  flex-basis: 100%;
+}
+.counters-section__heading {
+  position: relative;
+}

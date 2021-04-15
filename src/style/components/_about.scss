@@ -1,0 +1,50 @@
+.about-section {
+  padding-block: 20rem;
+  position: relative;
+  &__heading {
+    @media (min-width: 550px) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__text-wrapper {
+    @media (min-width: 550px) {
+      padding: 1rem 0 0 4.5rem;
+    }
+  }
+  &__text-wrapper--left {
+    @media (min-width: 550px) {
+      padding: 10.5rem 4.5rem 0 0;
+    }
+  }
+  &__img-wrapper {
+    margin-bottom: 5rem;
+    height: 450px;
+    width: 100%;
+    @media (min-width: 550px) {
+      margin-bottom: 0;
+    }
+  }
+}
+.about-section:before {
+  position: absolute;
+  top: 10rem;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  content: "";
+}
+.about-section:after {
+  position: absolute;
+  bottom: 10rem;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  content: "";
+}
+.img {
+  height: 100%;
+}
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
