@@ -1,22 +1,55 @@
 import * as React from "react"
-// import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 
 import Layout from "../components/layout/Layout"
 import Hero from "../components/hero/Hero"
 import About from "../components/about/About"
-import Counter from "../components/counters/Counter"
-import SEO from "../components/seo"
+import CounterSection from "../components/counters/CounterSection"
+import Seo from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({data}) => {
   
-  <Layout>
-    <SEO title="Home" />
+  
+  return(
+   <Layout>
+    <Seo title="Home" />
     <Hero />
-    <About />
-    <Counter />
-   
     
+    <About aboutData={data.allStrapiIndexPage.edges[0].node} />
+    <CounterSection /> 
   </Layout>
-)
-
+)}
+export const query = graphql`
+  query indexPageQuery {
+    allStrapiIndexPage {
+      edges {
+        node {
+          Header {
+            heading
+            video {
+              url
+            }
+          }
+          about {
+            about_image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            about_image1 {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+            heading
+            paragraph1
+            paragraph2
+            paragraph3
+            paragraph4
+          }
+        }
+      }
+    }
+  }
+`
 export default IndexPage

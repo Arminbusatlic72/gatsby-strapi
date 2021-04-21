@@ -46,6 +46,7 @@ const Menu = () => {
                   <Link className="nav__menu-link" to={body.url}>
                     {body.label}
                   </Link>
+
                   <ul className="nav__submenu">
                     {body.submenu.map(submenu => {
                       return (

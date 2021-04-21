@@ -4,16 +4,15 @@ import Src from "./InCap.mp4"
 const Hero = props => {
   return (
     <>
-      <div className="main-heading">
-        <div className="main-heading__wrapper">
-          <h1>Global knowledge fund</h1>
+      <div className="hero-section__wrapper">
+        <div className="hero-section__title-wrapper">
+          <h1 className="hero-section__title">Global knowledge fund</h1>
           <h2>
             Sharing valiable knowledge to effect systemic, positive social
             change
           </h2>
         </div>
-      </div>
-      <div className="video__wrapper">
+
         <video
           autoPlay
           loop

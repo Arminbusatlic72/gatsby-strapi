@@ -1,21 +1,21 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import Src from "../../images/henry1.jpg"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-const PageHeader = () => {
+const PageHeader = props => {
+  let data = props.headerData
   return (
     <div className="page-header__wrapper">
-      <StaticImage
+      <GatsbyImage
         className="img"
-        src={"../../images/neuralstem.jpg"}
+        image={data.featured_image.childImageSharp.gatsbyImageData}
         quality={95}
         layout="fullWidth"
         formats={["AUTO", "WEBP", "AVIF"]}
-        alt="A Gatsby astronaut"
+        alt="header featured image"
         style={{ marginBottom: `1.45rem` }}
       />
       <div className="page-header__title-wrapper">
-        <h2 className="page-header__title">Our Mission</h2>
+        <h2 className="page-header__title">{data.title}</h2>
       </div>
     </div>
   )

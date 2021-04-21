@@ -1,37 +1,4 @@
-.main-heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 250px;
-  width: 100%;
-  -webkit-animation: slideDown 2s 1.3s;
-  -moz-animation: slideDown 2s 1.3s;
-  animation: slideDown 2s 1.3s;
-  animation-timing-function: ease;
-  animation-fill-mode: backwards;
-  background-color: $white-color;
-  &__wrapper {
-    text-align: center;
-    max-width: 35rem;
-    @media (min-width: 550px) {
-      max-width: 80rem;
-    }
-  }
-
-  h1 {
-    font-weight: 900;
-    color: $blue-color;
-    @media (min-width: 550px) {
-      font-size: 9rem;
-    }
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 100;
-    margin-bottom: 8rem;
-  }
-}
-.video__wrapper {
+.hero-section__wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -44,13 +11,38 @@
   object-fit: cover;
   z-index: -100;
 }
+.hero-section__title-wrapper {
+  h2 {
+    color: $blue-color;
+    font-size: 2rem;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(17px);
+  width: 50rem;
+  padding: 2rem;
+  text-align: right;
+
+  -webkit-animation: slideDown 18s 2.5s;
+  -moz-animation: slideDown 18s 2.5s;
+  animation: slideDown 18s 2.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.hero-section__title {
+  line-height: 0.7;
+  color: $white-color;
+  position: relative;
+  @media (min-width: 550px) {
+    font-size: 9rem;
+  }
+}
 @keyframes slideDown {
   from {
-    min-height: 1000px;
-
-    overflow: hidden;
+    opacity: 1;
   }
   to {
-    min-height: 250px;
+    opacity: 0;
   }
 }

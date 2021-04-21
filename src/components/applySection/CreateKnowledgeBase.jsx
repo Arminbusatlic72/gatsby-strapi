@@ -1,7 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faDownload } from "@fortawesome/free-solid-svg-icons"
-import { config } from "@fortawesome/fontawesome-svg-core"
 
 const CreateKnowledgeBase = () => {
   return (
@@ -19,7 +18,7 @@ const CreateKnowledgeBase = () => {
               <p>Use Catalyst to create new Create knowledge Base...</p>
               <FontAwesomeIcon icon={faDownload} className="apply-icon" />
 
-              <a>Download fillable PDF form</a>
+              <a href="/">Download fillable PDF form</a>
             </div>
           </div>
 
@@ -27,7 +26,7 @@ const CreateKnowledgeBase = () => {
             <div>
               <p>Use Catalyst to enhance knowledge Base...</p>
               <FontAwesomeIcon icon={faDownload} className="apply-icon" />
-              <a>Download fillable PDF form</a>
+              <a href="/">Download fillable PDF form</a>
             </div>
           </div>
         </div>

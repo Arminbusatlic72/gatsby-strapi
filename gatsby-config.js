@@ -17,6 +17,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
@@ -41,9 +49,9 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`article`, `header`],
+        // contentTypes: [`article`, `header`],
         //If using single types place them in this array.
-        singleTypes: [`main-menu`, `index-page`, `footer`],
+        singleTypes: [`main-menu`, `index-page`,`apply-page`, `footer`, `management-page`, `board-page`,`mission-page`, `catalyst-page`, `knowledge-base`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: "",

@@ -4,12 +4,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faChevronUp,
   faMapMarkerAlt,
   faUsers,
   faEnvelope,
-  faFacebookF,
-  fbTweeterF,
 } from "@fortawesome/free-solid-svg-icons"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
@@ -45,13 +42,12 @@ const Footer = () => {
       }
     }
   `)
-  console.log(data)
 
   return (
     <footer>
       <div className="container">
         <div className="row">
-          <div className="col-xs-12 col-md-6">
+          <div className="col-xs-12 col-md-6 footer-left">
             <div className="footer-logo">
               <Link to="/">
                 <GatsbyImage
@@ -93,7 +89,7 @@ const Footer = () => {
                       <li key={socialMediaMenu.id}>
                         <a href={socialMediaMenu.url}>
                           <FontAwesomeIcon
-                            icon={socialMediaMenu.icon}
+                            icon={`fab fa-${socialMediaMenu.icon}`}
                             className="icon"
                           />
                         </a>

@@ -1,33 +1,29 @@
 import React from "react"
 // import CreateKnowledgeBase from "./CreateKnowledgeBase"
 
-const ApplySection = () => {
+const ApplySection = props => {
+  let data = props.sectionData
+
   return (
     <section className="apply-section">
       <div className="container">
-        <h6>Possibilities</h6>
+        <h6>{data.sub_title}</h6>
         <div className="apply-section__heading-wrapper">
-          <h2>Apply</h2>
+          <h2>{data.title}</h2>
           <button className="btn-contact">Contact us</button>
         </div>
         <div className="apply-section__text-wrapper">
-          <p>
-            Qulified applicants, as individuals or organizations, may receive
-            free licence for Catalyst and knowledge bases.
-          </p>
-          <p>In order to qualified, applicants must ferified the following:</p>
+          <p>{data.paragraph}</p>
+
           <ol>
-            <li>
-              subject matter expertise for a listed or proposed knowledge base
-            </li>
-            <li>un interest in or a history of working for social causes</li>
-            <li>
-              available time to provide expertise to one or more knowledge base
-            </li>
+            {data.verification.map(verificationItem => (
+              <li key={verificationItem.id}>
+                {verificationItem.verification_list_item}
+              </li>
+            ))}
           </ol>
         </div>
       </div>
-      {/* <CreateKnowledgeBase /> */}
     </section>
   )
 }

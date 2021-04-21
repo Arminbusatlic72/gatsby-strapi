@@ -1,0 +1,65 @@
+.advisor-card {
+  width: 100%;
+  // border: $border;
+  margin-block: 3rem;
+}
+.advisor-card__header {
+  width: 100%;
+  padding: 1rem 2rem 0 2rem;
+  border-bottom: $border;
+}
+.advisor-card__name {
+  display: inline-block;
+  position: relative;
+}
+
+.advisor-card__accordion-btn {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+}
+.advisor-card__image-wrapper {
+  width: 100%;
+  height: 300px;
+  gap: 1rem;
+  .img {
+    width: 100%;
+  }
+  @media (min-width: 550px) {
+    width: 30%;
+  }
+}
+.advisor-card__text-wrapper {
+  padding: 1rem 2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: $base-duration ease;
+  p {
+    opacity: 0;
+    transform: translateY(-$spacer * 2);
+    transition: $base-duration * 1.5 ease;
+  }
+}
+.is-active {
+  max-height: 65rem;
+  padding: 1rem 2rem;
+  p {
+    opacity: 1;
+    transform: translateY(0);
+    transition: $base-duration * 1.5 ease;
+  }
+}
+.blue {
+  color: $blue-color;
+  font-weight: bold;
+}
+.advisor-card__icon {
+  height: 3rem;
+  width: 3rem;
+  margin-top: 1rem;
+  transform: rotateX(180deg);
+  transform-origin: center center;
+}
+.card-open {
+  transform: rotateX(0);
+}

@@ -1,17 +1,18 @@
 .page-header__wrapper {
-  height: 40vh;
+  height: 60vh;
   width: 100%;
   position: relative;
 }
 .page-header__title-wrapper {
   position: absolute;
-  bottom: 0;
-  right: 40px;
+  top: 0;
+  right: 0;
   backdrop-filter: blur(7px);
+  background-color: white;
   padding: 2rem;
 }
 .page-header__title {
-  color: $white-color;
+  color: $blue-color;
   font-weight: 700;
   font-size: 4rem;
   @media (min-width: 550px) {

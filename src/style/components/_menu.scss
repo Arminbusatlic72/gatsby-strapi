@@ -17,7 +17,7 @@
 }
 .nav__line {
   width: 28px;
-  height: 3px;
+  height: 1px;
   margin-bottom: 5px;
   background-color: $black-color;
 }
@@ -32,7 +32,7 @@
   @include easeOut;
   .nav__line {
     width: 28px;
-    height: 3px;
+    height: 1px;
     margin-bottom: 5px;
     background: $black-color;
     @include easeOut;
@@ -43,7 +43,7 @@
       opacity: 0;
     }
     &:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
+      transform: rotate(-45deg) translate(3px, -3px);
     }
   }
 }
@@ -54,23 +54,26 @@
   z-index: 10;
   width: 100%;
   height: 100%;
-  min-height: 15vh;
+  min-height: 50vh;
   border: $border;
   box-shadow: $box-shadow;
   visibility: hidden;
+  padding-inline: 2rem;
   padding-top: 24px;
   padding-bottom: 56px;
-  background-color: #fff;
+  background-color: white;
   opacity: 0;
   pointer-events: none;
   transition: visibility 0.5s, opacity 0.5s;
   list-style: none;
+  box-shadow: $box-shadow;
 }
 .menu-show {
   transition: visibility 0.5s, opacity 0.5s;
   visibility: visible;
-  opacity: 1;
+  opacity: 1 !important;
   pointer-events: auto;
+  display: block !important;
 }
 .nav__content-wrapper {
   background-color: $white-color;
@@ -82,17 +85,18 @@
   }
 }
 .nav__menu-item {
+  background-color: white;
   display: flex;
   align-content: center;
-  justify-content: center;
   flex-basis: 100%;
   margin: 0;
-  padding: 0 2rem;
   position: relative;
-  border: $border;
+  border-bottom: $border;
+  margin-inline: 1rem;
+  cursor: pointer;
 }
-.nav__menu-item:last-child {
-  // border: none;
+.nav__menu-item:hover {
+  background-color: rgba(136, 136, 136, 0.05);
 }
 .nav__menu-link {
   text-decoration: none;

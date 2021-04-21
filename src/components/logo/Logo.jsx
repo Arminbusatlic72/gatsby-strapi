@@ -1,16 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAtom } from "@fortawesome/free-solid-svg-icons"
-import { config } from "@fortawesome/fontawesome-svg-core"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Logo = () => {
-  config.autoAddCss = false
   return (
     <div className="header__logo">
       <Link to="/">
-        {/* <FontAwesomeIcon icon={faAtom} className="logo" /> */}
-        GKF
+        <StaticImage
+          className=""
+          src="../../images/logo.png"
+          width={150}
+          height={85}
+          quality={95}
+          // layout="fullWidth"
+          formats={["AUTO", "WEBP", "AVIF"]}
+          alt="Logo"
+          style={{ marginTop: `1.45rem` }}
+        />
       </Link>
     </div>
   )
