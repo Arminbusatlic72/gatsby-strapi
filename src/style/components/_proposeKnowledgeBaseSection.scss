@@ -1,5 +1,8 @@
 .propose-knowledge-base-section {
-  padding-block: 10rem;
+  padding-block: 5rem;
+  @media (min-width: 550px) {
+    padding-block: 10rem;
+  }
 
   h6 {
     color: $gray-color;

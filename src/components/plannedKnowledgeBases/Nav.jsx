@@ -1,7 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, Fragment } from "react"
+import scrollTo from "gatsby-plugin-smoothscroll"
+
+// import { useScrollYPosition } from "react-use-scroll-position"
+// import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Nav = () => {
   const [open, setOpen] = useState(false)
+
   return (
     <>
       <div
@@ -13,28 +18,72 @@ const Nav = () => {
       >
         Menu
       </div>
-      <div className={open === true ? "page-nav menu-show" : "page-nav"}>
-        <ul className="page-navigation__list">
+
+      <ul
+        className={
+          open === true
+            ? "page-navigation__list menu-show"
+            : "page-navigation__list"
+        }
+      >
+        <Fragment>
           <li className="page-navigation__list-item">
-            <a href="/">Civil rights</a>
+            <div
+              onClick={() => scrollTo("#civilrights")}
+              onKeyDown={() => scrollTo("#civilrights")}
+              role="presentation"
+            >
+              Civil Rights
+            </div>
           </li>
           <li className="page-navigation__list-item">
-            <a href="/">Economic Access</a>
+            <div
+              onClick={() => scrollTo("#economicaccess")}
+              onKeyDown={() => scrollTo("#economicaccess")}
+              role="presentation"
+            >
+              Economics Access
+            </div>
+          </li>
+
+          <li className="page-navigation__list-item">
+            <div
+              onClick={() => scrollTo("#environmental")}
+              onKeyDown={() => scrollTo("#environmental")}
+              role="presentation"
+            >
+              Environmental
+            </div>
           </li>
           <li className="page-navigation__list-item">
-            <a href="/">Environmental</a>
+            <div
+              onClick={() => scrollTo("#health")}
+              onKeyDown={() => scrollTo("#health")}
+              role="presentation"
+            >
+              Health
+            </div>
           </li>
           <li className="page-navigation__list-item">
-            <a href="/">Health</a>
+            <div
+              onClick={() => scrollTo("#humanrights")}
+              onKeyDown={() => scrollTo("#humanrights")}
+              role="presentation"
+            >
+              Human Rights
+            </div>
           </li>
           <li className="page-navigation__list-item">
-            <a href="/">Human rights</a>
+            <div
+              onClick={() => scrollTo("#legal")}
+              onKeyDown={() => scrollTo("#legal")}
+              role="presentation"
+            >
+              Legal
+            </div>
           </li>
-          <li className="page-navigation__list-item">
-            <a href="/">Legal</a>
-          </li>
-        </ul>
-      </div>
+        </Fragment>
+      </ul>
     </>
   )
 }

@@ -8,6 +8,7 @@ import PlannedKnowledgeBasesSection from '../components/plannedKnowledgeBases/Pl
 import ProposeKnowledgeBaseSection from '../components/plannedKnowledgeBases/ProposeKnowledgeBaseSection'
 
 const KnowledgeBasePage = ({data}) => {
+  console.log(data)
     
     return (
         <Layout>
@@ -37,6 +38,7 @@ query KnowledgeBasePageQuery {
           }
           section {
             id
+            section_id
             section_alignment
             section_title
             section_list {

@@ -1,6 +1,9 @@
 .counter-section {
   color: $white-color;
-  padding-block: 10rem;
+  padding-block: 5rem;
+  @media (min-width: 550px) {
+    padding-block: 10rem;
+  }
 }
 
 .counters-section__heading:before {
@@ -12,12 +15,29 @@
   background-color: currentColor;
   content: "";
 }
-.counters-wrapper {
-  display: flex;
-}
-.counter {
-  flex-basis: 100%;
-}
+
 .counters-section__heading {
   position: relative;
+  margin-bottom: 5rem;
+}
+.counters-sub-section {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  border: $border;
+}
+.counters-sub-section__heading-wrapper {
+  display: block;
+  width: 100%;
+  margin-inline: 2rem;
+}
+.counters-sub-section__heading {
+  margin-inline: 2rem;
+}
+.counters-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+.counter {
+  margin-inline: 2rem;
 }

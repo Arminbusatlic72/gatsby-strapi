@@ -1,5 +1,16 @@
 .contact-section {
-  padding-block: 10rem;
+  padding-block: 5rem;
+  @media (min-width550px) {
+    padding-block: 10rem;
+  }
+
+  .icon {
+    color: black;
+    height: 4rem;
+  }
+}
+.contact-section__heading {
+  margin-bottom: 5rem;
 }
 .contact_form {
   display: flex;

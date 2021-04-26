@@ -1,25 +1,21 @@
-.apply-section {
+.blog-section {
   padding-block: 5rem;
   @media (min-width: 550px) {
     padding-block: 10rem;
   }
 }
-.apply-section__heading-wrapper {
+.blog-section__heading {
   position: relative;
-  min-height: 10rem;
+  margin-bottom: 5rem;
   @media (min-width: 550px) {
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 10rem;
   }
 }
-.apply-section__heading-wrapper:before {
+.blog-section__heading:before {
   position: absolute;
-  bottom: 0rem;
+  bottom: -3rem;
   height: 2px;
   width: 100%;
   background-color: currentColor;
   content: "";
-}
-.apply-section__text-wrapper {
-  padding-block: 4rem;
 }

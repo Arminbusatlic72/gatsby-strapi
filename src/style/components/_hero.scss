@@ -17,12 +17,16 @@
     font-size: 2rem;
   }
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5rem;
   backdrop-filter: blur(17px);
-  width: 50rem;
-  padding: 2rem;
-  text-align: right;
+  text-align: center;
+  @media (min-width: 550px) {
+    top: 0;
+    right: 0;
+    width: 40rem;
+    padding: 2rem;
+    text-align: right;
+  }
 
   -webkit-animation: slideDown 18s 2.5s;
   -moz-animation: slideDown 18s 2.5s;

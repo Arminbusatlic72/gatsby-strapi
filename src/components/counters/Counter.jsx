@@ -1,26 +1,28 @@
-import React from "react"
-import { useCountUp } from "react-countup"
+import React, { useState } from "react"
+import CountUp from "react-countup"
+import VisibilitySensor from "react-visibility-sensor"
 
-const Counter = () => {
-  const { countUp, start, pauseResume, reset, update } = useCountUp({
-    start: 0,
-    end: 1234567,
-    delay: 1000,
-    duration: 5,
-    onReset: () => console.log("Resetted!"),
-    onUpdate: () => console.log("Updated!"),
-    onPauseResume: () => console.log("Paused or resumed!"),
-    onStart: ({ pauseResume }) => console.log(pauseResume),
-    onEnd: ({ pauseResume }) => console.log(pauseResume),
-  })
+const Counter = ({ className, ...rest }) => {
+  const [viewPortEntered, setViewPortEntered] = useState(false)
+
   return (
-    <>
-      <div>{countUp}</div>
-      <button onClick={start}>Start</button>
-      <button onClick={reset}>Reset</button>
-      <button onClick={pauseResume}>Pause/Resume</button>
-      <button onClick={() => update(2000)}>Update to 2000</button>
-    </>
+    <CountUp {...rest} start={viewPortEntered ? null : 0}>
+      {({ countUpRef }) => {
+        return (
+          <VisibilitySensor
+            active={!viewPortEntered}
+            onChange={isVisible => {
+              if (isVisible) {
+                setViewPortEntered(true)
+              }
+            }}
+            delayedCall
+          >
+            <h6 className={className} ref={countUpRef} />
+          </VisibilitySensor>
+        )
+      }}
+    </CountUp>
   )
 }
 

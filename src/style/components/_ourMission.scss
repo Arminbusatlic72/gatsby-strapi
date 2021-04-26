@@ -1,6 +1,9 @@
 .our-mission-section {
   position: relative;
-  padding-block: 10rem;
+  padding-block: 5rem;
+  @media (min-width: 550px) {
+    padding-block: 10rem;
+  }
 }
 .our-mission-section__title-wrapper {
   text-align: center;

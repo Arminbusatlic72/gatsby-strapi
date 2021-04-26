@@ -1,6 +1,9 @@
 .planed-knowledge-bases-section {
   position: relative;
-  padding-block: 10rem;
+  padding-block: 5rem;
+  @media (min-width: 550px) {
+    padding-block: 10rem;
+  }
 }
 .planed-knowledge-bases-section__heading {
   margin-bottom: 4rem;
@@ -33,6 +36,20 @@
   }
 }
 .page-navigation__list {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  border: $border;
+  background-color: #fff;
+  transition: visibility 0.5s, opacity 0.5s;
+  list-style: none;
+  box-shadow: $box-shadow;
+  display: none;
+  z-index: 1000;
+  @media (min-width: 550px) {
+    opacity: 1;
+    display: flex;
+  }
   list-style: none;
   margin: 0;
   padding: 0;
@@ -51,7 +68,9 @@
   background-repeat: no-repeat;
   background-size: calc(100% - 6px) 0;
   transition: background 0.5s;
+  cursor: pointer;
   @media (min-width: 550px) {
+    text-align: center;
     align-items: center;
     justify-content: center;
     flex: 1 1 auto;
@@ -94,14 +113,13 @@
   }
 
   box-sizing: border-box;
-  // padding: 32px 0 32px 32px;
+
   padding: 0 15px;
   transition: margin 1.5s linear;
   @media (min-width: 550px) {
     width: 30%;
     margin-top: 0;
     width: 50%;
-    // padding: 64px 0 64px 64px;
   }
 }
 .left {
@@ -109,10 +127,14 @@
     order: 2;
   }
 }
+.right > .list > .num {
+  @media (min-width: 550px) {
+    justify-content: flex-end;
+  }
+}
 .civil-rights-section {
   background-color: $white-color;
   padding-block: 5rem;
-  margin-block: 10rem;
   position: relative;
 }
 .civil-rights-section__heading:before {

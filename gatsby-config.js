@@ -28,6 +28,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-smoothscroll`,
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -49,7 +56,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        // contentTypes: [`article`, `header`],
+        contentTypes: [`blog`],
         //If using single types place them in this array.
         singleTypes: [`main-menu`, `index-page`,`apply-page`, `footer`, `management-page`, `board-page`,`mission-page`, `catalyst-page`, `knowledge-base`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).

@@ -5,7 +5,7 @@ const Section = props => {
   let data = props.sectionData
 
   return (
-    <section className="civil-rights-section">
+    <section className="civil-rights-section" id={data.section_id}>
       <div className="container">
         <h2 className="civil-rights-section__heading">{data.section_title}</h2>
       </div>

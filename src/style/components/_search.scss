@@ -32,6 +32,9 @@
 .open {
   display: block !important;
 }
+.closed {
+  display: none !important;
+}
 .search-box__icon-holder {
   margin: 0;
   cursor: pointer;

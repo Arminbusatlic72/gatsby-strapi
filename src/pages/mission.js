@@ -7,7 +7,7 @@ import OurMission from '../components/ourMission/OurMission'
 
 
 const MissionPage = ({data}) => {
-    console.log(data)
+   
     
     return (
         <Layout>

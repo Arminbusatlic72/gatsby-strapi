@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
-import { StaticImage } from "gatsby-plugin-image"
 import Icon from "../../assets/icons8-search.svg"
 const Search = () => {
   const [open, setOpen] = useState(false)
@@ -15,18 +14,18 @@ const Search = () => {
         role="presentation"
       >
         Search
-        <Icon
-          // src="../../images/icons8-search-100.png"
-          // height={20}
-          // width={20}
-          className={open === true ? "icon" : "icon open"}
-        />
-        <StaticImage
-          src="../../images/close.png"
-          height={30}
-          width={30}
-          className={open === true ? "icon open" : "icon"}
-        />
+        <Icon className={open === true ? "icon" : "icon open"} />
+        <div
+          className={open === true ? "btn__rotate open" : "nav__btn closed"}
+          onClick={() => setOpen(!open)}
+          onKeyDown={() => setOpen(!open)}
+          role="button"
+          tabIndex="0"
+        >
+          <div className="nav__line"> </div>
+          <div className="nav__line"> </div>
+          <div className="nav__line"> </div>
+        </div>
       </div>
 
       <div

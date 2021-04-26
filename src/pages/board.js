@@ -1,12 +1,15 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '../components/layout/Layout'
+import Seo from '../components/seo'
 import BoardMembersSection from '../components/boardMembersSection/BoardMembersSection'
 
 const BoardPage = ({data}) => {
   
+  
     return (
         <Layout>
+          <Seo title="Board"/>
             <BoardMembersSection sectionData={data.allStrapiBoardPage.edges[0].node} />
         </Layout>
     )

@@ -7,11 +7,11 @@ const KnowledgeAndWisdomSection = props => {
     <section className="knowledge-and-wisdom-section bg-gray">
       <div className="container">
         <div className="row">
-          <div className="col-md-5">
+          <div className=" col-xs-12 col-md-5 col-lg-4">
             <h6>{data.title}</h6>
             <h2>{data.sub_title}</h2>
           </div>
-          <div className="col-md-7 text-wrapper">
+          <div className=" col-xs-12 col-md-7 col-lg-8 text-wrapper">
             <div className="list">
               {data.knowledge_base_list.map(item => (
                 <div className="num" key={item.id}>
