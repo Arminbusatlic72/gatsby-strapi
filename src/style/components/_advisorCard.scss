@@ -1,6 +1,5 @@
 .advisor-card {
   width: 100%;
-  // border: $border;
   margin-block: 3rem;
 }
 .advisor-card__header {
@@ -54,9 +53,9 @@
   font-weight: bold;
 }
 .advisor-card__icon {
-  height: 3rem;
-  width: 3rem;
-  margin-top: 1rem;
+  height: 2rem;
+  width: 2rem;
+  margin-top: 2.2rem;
   transform: rotateX(180deg);
   transform-origin: center center;
 }

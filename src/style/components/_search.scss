@@ -8,10 +8,9 @@
 .search-box__wrapper {
   position: absolute;
   text-align: center;
-  top: -130px;
+  top: -108px;
   left: 50%;
   width: 100%;
-  max-width: 1200px;
   visibility: hidden;
   padding-top: 54px;
   padding-bottom: 54px;
@@ -70,28 +69,30 @@
 
 .search-box__input {
   width: 70%;
-  border-right: none !important;
   padding: 5px;
   height: 60px;
-  border-radius: 5px 0 0 5px !important;
   outline: none;
   color: #9dbfaf;
+  border-radius: 5px 0 0 5px !important;
+  border: 1px solid black !important;
+  border-right: none !important;
 }
 .search-box__button {
-  width: 60px;
-  height: 62px;
   border: 1px solid black;
-  background: black;
+  background: $gray-color;
   text-align: center;
-  color: #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   padding: 0.9rem;
   margin-bottom: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .icon {
+    color: black;
+    width: 3rem;
     height: 3rem;
-    display: block;
-    margin: auto;
+    margin: 0 8px;
   }
 }

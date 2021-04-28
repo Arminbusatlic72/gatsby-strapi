@@ -58,7 +58,7 @@ module.exports = {
         queryLimit: 1000, // Default to 100
         contentTypes: [`blog`],
         //If using single types place them in this array.
-        singleTypes: [`main-menu`, `index-page`,`apply-page`, `footer`, `management-page`, `board-page`,`mission-page`, `catalyst-page`, `knowledge-base`],
+        singleTypes: [`main-menu`, `index-page`,`apply-page`, `footer`, `management-page`, `board-page`,`mission-page`, `catalyst-page`, `knowledge-base`, `counter-section`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: "",

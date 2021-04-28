@@ -18,28 +18,34 @@ const ContactPage = () => {
             <div className="container">
             <h2 className="contact-section__heading">Contact Us</h2>
                 <div className="row">
-                    <div className="col-xs-12 col-md-4">
-                        
-                        <div>
+                    <div className="col-xs-12 col-md-5">
+                    <p>Send us a message and we will reply as soon as we can.</p>
+                       
+                           
                         <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-                            <h6>Location</h6>
+                        <div className="contact-section__text-wrapper">
+                            <h6>Location:</h6>
                             <p>Los Angeles USA</p>
                             <p>Streat</p>
 
                         </div>
-                        <div className="">
                         <FontAwesomeIcon icon={faPhoneSquare} className="icon" />
-                            <h6>Tel No</h6>
+                        <div className="contact-section__text-wrapper">
+                        
+                            <h6>Tel No:</h6>
                             <p>1 2234563</p>
+                            </div>
                             <FontAwesomeIcon icon={faEnvelope} className="icon" />
-                            <h6>Email</h6>
+                            <div className="contact-section__text-wrapper">
+                           
+                            <h6>Email:</h6>
                             <p>Los Angeles USA</p>
                             <p>Streat</p>
 
                         </div>
                     
                     </div>
-                    <div className="col-xs-12 col-md-8">
+                    <div className="col-xs-12 col-md-7">
                     <ContactForm />
                     </div>
                 </div>

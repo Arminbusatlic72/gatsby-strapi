@@ -1,5 +1,9 @@
 .knowledge-and-wisdom-section {
-  padding-block: 10rem;
+  padding-block: 5rem;
+  @media (min-width: 550px) {
+    padding-block: 10rem;
+  }
+
   ul {
     list-style: disc;
   }

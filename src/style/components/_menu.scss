@@ -78,6 +78,7 @@
 .nav__content-wrapper {
   background-color: $white-color;
   @media (min-width: 550px) {
+    margin-top: 5rem;
     display: flex;
     display: grid;
     -ms-grid-columns: (auto) [4];
@@ -87,7 +88,7 @@
 .nav__menu-item {
   background-color: white;
   display: flex;
-  align-content: center;
+  justify-content: center;
   flex-basis: 100%;
   margin: 0;
   position: relative;
@@ -100,14 +101,13 @@
 }
 .nav__menu-link {
   text-decoration: none;
-  text-transform: capitalize;
-  font-size: 2rem;
+  text-transform: uppercase;
   font-weight: 600;
   color: $black-color;
-  align-items: center;
-  justify-content: center;
-  display: flex;
   cursor: pointer;
+  @media (min-width: 880px) {
+    font-size: 3rem;
+  }
 }
 
 .nav__submenu {

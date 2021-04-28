@@ -135,6 +135,9 @@
 .civil-rights-section {
   background-color: $white-color;
   padding-block: 5rem;
+  @media (min-width: 550px) {
+    padding-block: 10rem;
+  }
   position: relative;
 }
 .civil-rights-section__heading:before {

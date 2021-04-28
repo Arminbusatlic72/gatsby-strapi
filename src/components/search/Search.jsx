@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import Icon from "../../assets/icons8-search.svg"
 const Search = () => {
   const [open, setOpen] = useState(false)
@@ -43,7 +41,7 @@ const Search = () => {
           />
 
           <button className="search-box__button" type="submit">
-            <FontAwesomeIcon icon={faSearch} className="icon" />
+            <Icon className={"icon"} />
           </button>
         </form>
       </div>
