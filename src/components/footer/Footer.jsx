@@ -8,6 +8,7 @@ import {
   faUsers,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"
+
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
@@ -58,12 +59,13 @@ const Footer = () => {
                   alt="logo"
                   layout="fixed"
                   quality={95}
-                  // formats={["AUTO", "WEBP", "AVIF"]}
+                  formats={["AUTO", "WEBP", "AVIF"]}
                 />
               </Link>
             </div>
-
-            <p>{data.allStrapiFooter.edges[0].node.heading}</p>
+            <div className="footer__text-wrapper">
+              <p>{data.allStrapiFooter.edges[0].node.heading}</p>
+            </div>
           </div>
 
           <div className="col-xs-12 col-md-6">
@@ -83,16 +85,11 @@ const Footer = () => {
               <div className="col-xs-6">
                 <FontAwesomeIcon icon={faUsers} className="icon" />
                 <h3 className="social">Social media</h3>
-                <ul>
+                <ul className="social-media-menu">
                   {data.allStrapiFooter.edges[0].node.socialMediaMenu.map(
                     socialMediaMenu => (
                       <li key={socialMediaMenu.id}>
-                        <a href={socialMediaMenu.url}>
-                          <FontAwesomeIcon
-                            icon={`fab fa-${socialMediaMenu.icon}`}
-                            className="icon"
-                          />
-                        </a>
+                        <a href={socialMediaMenu.url}>{socialMediaMenu.icon}</a>
                       </li>
                     )
                   )}

@@ -4,7 +4,6 @@ import Section from "./Section"
 
 const PlannedKnowledgeBasesSection = props => {
   let data = props.sectionData
-  console.log(data)
 
   return (
     <section className="planed-knowledge-bases-section light-background">

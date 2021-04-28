@@ -11,11 +11,6 @@ const Menu = () => {
               id
               label
               url
-              submenu {
-                id
-                submenuUrl
-                submenulabel
-              }
             }
           }
         }
@@ -43,21 +38,9 @@ const Menu = () => {
             {data.allStrapiMainMenu.edges[0].node.body.map(body => {
               return (
                 <li key={body.id} className="nav__menu-item">
-                  <Link className="nav__menu-link" to={body.url}>
+                  <Link className="nav__menu-link" to={`/${body.url}`}>
                     {body.label}
                   </Link>
-
-                  <ul className="nav__submenu">
-                    {body.submenu.map(submenu => {
-                      return (
-                        <li key={submenu.id} className="nav__submenu-item">
-                          <Link className="nav__submenu-link">
-                            {submenu.submenulabel}
-                          </Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
                 </li>
               )
             })}

@@ -25,18 +25,16 @@ const About = props => {
           <div className="col-xs-12 col-sm-6 no-padding order-1">
             <div className="about-section__text-wrapper">
               <p>{data.about.paragraph1}</p>
+
               <p>{data.about.paragraph2}</p>
             </div>
           </div>
 
           <div className="col-xs-12 col-sm-6 no-padding order-3">
             <div className="about-section__text-wrapper--left">
-              <p>
-                <p>{data.about.paragraph3}</p>
-              </p>
-              <p>
-                <p>{data.about.paragraph4}</p>
-              </p>
+              <p>{data.about.paragraph3}</p>
+
+              <p>{data.about.paragraph4}</p>
             </div>
           </div>
           <div className="col-xs-12 col-sm-6 no-padding order-4">

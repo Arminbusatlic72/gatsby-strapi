@@ -22,21 +22,24 @@ const ContactPage = () => {
                     <p>Send us a message and we will reply as soon as we can.</p>
                        
                            
-                        <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
+                       
                         <div className="contact-section__text-wrapper">
+                        <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
                             <h6>Location:</h6>
                             <p>Los Angeles USA</p>
                             <p>Streat</p>
 
                         </div>
-                        <FontAwesomeIcon icon={faPhoneSquare} className="icon" />
+                        
                         <div className="contact-section__text-wrapper">
+                        <FontAwesomeIcon icon={faPhoneSquare} className="icon" />
                         
                             <h6>Tel No:</h6>
                             <p>1 2234563</p>
                             </div>
-                            <FontAwesomeIcon icon={faEnvelope} className="icon" />
+                           
                             <div className="contact-section__text-wrapper">
+                            <FontAwesomeIcon icon={faEnvelope} className="icon" />
                            
                             <h6>Email:</h6>
                             <p>Los Angeles USA</p>

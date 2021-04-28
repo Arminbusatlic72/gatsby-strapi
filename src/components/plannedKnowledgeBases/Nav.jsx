@@ -1,9 +1,6 @@
 import React, { useState, Fragment } from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
-// import { useScrollYPosition } from "react-use-scroll-position"
-// import { AnchorLink } from "gatsby-plugin-anchor-links"
-
 const Nav = () => {
   const [open, setOpen] = useState(false)
 
@@ -29,8 +26,18 @@ const Nav = () => {
         <Fragment>
           <li className="page-navigation__list-item">
             <div
-              onClick={() => scrollTo("#civilrights")}
-              onKeyDown={() => scrollTo("#civilrights")}
+              onClick={() => {
+                scrollTo("#civilrights")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
+              onKeyDown={() => {
+                scrollTo("#civilrights")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
               role="presentation"
             >
               Civil Rights
@@ -38,8 +45,18 @@ const Nav = () => {
           </li>
           <li className="page-navigation__list-item">
             <div
-              onClick={() => scrollTo("#economicaccess")}
-              onKeyDown={() => scrollTo("#economicaccess")}
+              onClick={() => {
+                scrollTo("#economicaccess")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
+              onKeyDown={() => {
+                scrollTo("#economicaccess")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
               role="presentation"
             >
               Economics Access
@@ -48,8 +65,18 @@ const Nav = () => {
 
           <li className="page-navigation__list-item">
             <div
-              onClick={() => scrollTo("#environmental")}
-              onKeyDown={() => scrollTo("#environmental")}
+              onClick={() => {
+                scrollTo("#environmental")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
+              onKeyDown={() => {
+                scrollTo("#environmental")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
               role="presentation"
             >
               Environmental
@@ -57,8 +84,18 @@ const Nav = () => {
           </li>
           <li className="page-navigation__list-item">
             <div
-              onClick={() => scrollTo("#health")}
-              onKeyDown={() => scrollTo("#health")}
+              onClick={() => {
+                scrollTo("#health")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
+              onKeyDown={() => {
+                scrollTo("#health")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
               role="presentation"
             >
               Health
@@ -66,8 +103,18 @@ const Nav = () => {
           </li>
           <li className="page-navigation__list-item">
             <div
-              onClick={() => scrollTo("#humanrights")}
-              onKeyDown={() => scrollTo("#humanrights")}
+              onClick={() => {
+                scrollTo("#humanrights")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
+              onKeyDown={() => {
+                scrollTo("#humanrights")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
               role="presentation"
             >
               Human Rights
@@ -75,8 +122,18 @@ const Nav = () => {
           </li>
           <li className="page-navigation__list-item">
             <div
-              onClick={() => scrollTo("#legal")}
-              onKeyDown={() => scrollTo("#legal")}
+              onClick={() => {
+                scrollTo("#legal")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
+              onKeyDown={() => {
+                scrollTo("#legal")
+                if (window.innerWidth < 757) {
+                  setOpen(!open)
+                }
+              }}
               role="presentation"
             >
               Legal

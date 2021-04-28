@@ -5,7 +5,8 @@
   }
   .icon {
     color: black;
-    height: 4rem;
+    height: 3rem;
+    display: block;
   }
 }
 .contact-section__heading {
@@ -21,8 +22,11 @@
   content: "";
 }
 .contact-section__text-wrapper {
-  padding-bottom: 3rem;
-  // float: right;
+  padding: 2rem;
+  border: $border;
+  box-shadow: $box-shadow;
+  background-repeat: 0.4rem;
+  margin-bottom: 2rem;
   h6,
   p {
     display: inline-block;
@@ -32,18 +36,15 @@
   }
 }
 .contact_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  max-width: 880px;
-  width: 100%;
-  margin: 0 auto;
+  border: $border;
+  box-shadow: $box-shadow;
+
   @media (min-width: 550px) {
-    margin-top: 20rem;
-    width: 100%;
+    margin-top: 12rem;
+    padding-inline: 2rem;
+    min-height: 50rem;
   }
-  height: 450px;
-  padding: 10px 0;
+
   input[name="email"],
   input[name="name"] {
     width: 100%;

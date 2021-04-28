@@ -37,15 +37,6 @@ footer .footer-logo a img {
   width: 100%;
 }
 
-// footer .right-cols .columns {
-//   padding-right: 5px;
-//   padding-left: 5px;
-//   width: 33.33333%;
-// }
-// footer .right-cols .columns p {
-//   margin-bottom: 6px;
-// }
-
 footer h3 {
   font: 600 13px/24px "Open Sans", sans-serif;
   margin-bottom: 0;
@@ -62,10 +53,24 @@ footer .columns svg {
   color: #738291;
   display: block;
 }
+.social-media-menu {
+  // display: flex;
 
+  li {
+    margin-right: 1rem;
+    padding: 1rem;
+    // border: 1px solid white;
+    // border-radius: 50%;
+  }
+}
+.footer__text-wrapper {
+  max-width: 33rem;
+  width: 100%;
+}
 footer ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 footer ul li {
   margin: 0;

@@ -35,15 +35,16 @@ const CounterSection = () => {
             {data.allStrapiCounterSection.edges[0].node.title}
           </h2>
           <Slider
-            dots={false}
+            dots={true}
+            arrows={false}
             slidesToShow={1}
             slidesToScroll={1}
             autoplay={true}
-            autoplaySpeed={10000}
+            autoplaySpeed={5000}
           >
             {data.allStrapiCounterSection.edges[0].node.counter_sub_section.map(
               subsection => (
-                <div>
+                <div key={subsection.id}>
                   <CounterSubSection
                     key={subsection.id}
                     sectionData={subsection}
