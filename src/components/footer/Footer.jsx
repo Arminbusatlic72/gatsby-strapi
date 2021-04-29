@@ -72,7 +72,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-xs-6">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-                <h3 className="address">Posjetite nas</h3>
+                <h3 className="address">Visit Us</h3>
                 <p>
                   {data.allStrapiFooter.edges[0].node.addressLine1}
                   <br />
@@ -84,7 +84,7 @@ const Footer = () => {
 
               <div className="col-xs-6">
                 <FontAwesomeIcon icon={faUsers} className="icon" />
-                <h3 className="social">Social media</h3>
+                <h3 className="social">Follow Us</h3>
                 <ul className="social-media-menu">
                   {data.allStrapiFooter.edges[0].node.socialMediaMenu.map(
                     socialMediaMenu => (

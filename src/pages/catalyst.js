@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import CatalystVideo from '../components/catalystSection/CatalystVideo'
 import CatalystSection from '../components/catalystSection/CatalystSection'
 const CatalystPage = ({data}) => {
-    console.log(data)
+    
     return (
        <Layout>
            <Seo title="Catalyst" />

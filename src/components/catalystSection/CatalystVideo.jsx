@@ -1,15 +1,10 @@
 import React from "react"
 import { Player, ControlBar } from "video-react"
+import Src from "../../video/IncapVideo.mp4"
 
 const CatalystVideo = props => {
   return (
-    <Player
-      autoPlay
-      loop
-      muted
-      preloaded="auto"
-      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-    >
+    <Player autoPlay loop muted preloaded="auto" src={Src}>
       <ControlBar
         autoHide={true}
         disableDefaultControls={true}

@@ -24,7 +24,10 @@
   padding-block: 2rem;
   padding-inline: 1rem;
   border: $border;
-  min-height: 25rem;
+  min-height: 33rem;
+  @media (min-width: 550px) {
+    min-height: 23rem;
+  }
 }
 .counters-sub-section__heading-wrapper {
   display: block;
@@ -44,7 +47,4 @@
 }
 .counter {
   margin-inline: 2rem;
-  h6 {
-    color: $blue-color;
-  }
 }
